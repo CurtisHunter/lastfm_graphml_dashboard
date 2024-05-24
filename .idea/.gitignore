@@ -1,0 +1,16 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Ignore Python bytecode
+__pycache__/
+*.py[cod]
+
+# Ignore virtual environment directories
+venv/
+.venv/
+
+# Ignore other temporary files
+*.log
+*.sqlite3
+.DS_Store
+confidential.py
