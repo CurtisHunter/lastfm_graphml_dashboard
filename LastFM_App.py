@@ -15,7 +15,6 @@ from collections import Counter
 import s3fs
 from streamlit_searchbox import st_searchbox
 import seaborn as sns
-import testfunction_model_inference as tfu
 from PIL import Image
 from io import BytesIO
 
