@@ -165,7 +165,7 @@ def intro_page():
     st.text(" ")
     st.text(" ")
     st.markdown("""
-    ##### My Changes to the Data
+    ##### Data Modifications
     For intuition, I have mapped the country attribute of nodes, to actual country names (see Country Mapping tab). These country names were somewhat arbitrary as the data source does not provide the name of the country IDs. The most common country IDs in the dataset are the most populus countries. For example, instead of referring to country ('target') 0, I call that country ID 'Indonesia' """)
     st.text(" ")
     st.text(" ")
@@ -340,6 +340,9 @@ def inference_page(graph):
     st.set_option('deprecation.showfileUploaderEncoding', False)
     pd.set_option('display.max_rows', len(model_report_df))
     st.write(model_report_df)
+
+    st.image("FeatureImportances.png",
+             caption="Note: The features which are just numbers are the IDs of artists")
 
 def create_X_new_node(G, new_node, artists):
     X = []
