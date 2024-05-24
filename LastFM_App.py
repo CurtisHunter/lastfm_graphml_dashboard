@@ -166,7 +166,7 @@ def intro_page():
     st.text(" ")
     st.markdown("""
     ##### Data Modifications
-    For intuition, I have mapped the country attribute of nodes, to actual country names (see Country Mapping tab). These country names were somewhat arbitrary as the data source does not provide the name of the country IDs. The most common country IDs in the dataset are the most populus countries. For example, instead of referring to country ('target') 0, I call that country ID 'Indonesia' """)
+    For intuition, I have mapped the country attribute of nodes, to actual country names (see Country Mapping tab). These country names were somewhat arbitrary as the data source does not provide the name of the country IDs. The most common country IDs in the dataset are the most populus countries. For example, instead of using the country label ('target') 0, I have labelled ID 0 as 'Indonesia' """)
     st.text(" ")
     st.text(" ")
     st.text(" ")
@@ -277,7 +277,7 @@ def inference_page(graph):
     artist_list = artists_df['Artist'].tolist()
     node_list = list(graph.nodes)[1:]
 
-    selected_artists = st.multiselect('Select artists (by Artist ID', artist_list)
+    selected_artists = st.multiselect('Select artists (by Artist ID)', artist_list)
     selected_friends = st.multiselect('Select friends (by User ID)', node_list)
 
     if st.button('Predict'):
