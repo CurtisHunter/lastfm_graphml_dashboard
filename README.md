@@ -3,7 +3,7 @@ https://lastfmnetwork.streamlit.app/
 
 
 #### Please find the Jupyter notebook for the full model development process here:
-https://github.com/curtiscoding1/lastfm_graphml_dashboard/blob/main/LASTFM_Network_Classifier_Development.ipynb
+https://github.com/CurtisHunter/lastfm_graphml_dashboard/blob/main/LASTFM_Network_Classifier_Development.ipynb
 
 #### Streamlit Dashboard code:
-https://github.com/curtiscoding1/lastfm_graphml_dashboard/blob/main/LastFM_App.py
+https://github.com/CurtisHunter/lastfm_graphml_dashboard/blob/main/LastFM_App.py
