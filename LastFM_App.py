@@ -150,7 +150,7 @@ def plot_target_distribution(target_df):
 
 def intro_page():
     st.title('LastFM Social Network Classifier')
-    st.write('This is an app to showcase network visualization and a machine learning model with 89% accuracy which was developed in [this](https://github.com/curtiscoding1/lastfm_graphml_dashboard/blob/main/LASTFM_Network_Classifier_Development.ipynb) Jupyer Notebook .')
+    st.write('This is an app to showcase network visualization and a machine learning model with 89% accuracy which was developed in [this](https://github.com/CurtisHunter/lastfm_graphml_dashboard/blob/main/LASTFM_Network_Classifier_Development.ipynb) Jupyer Notebook .')
     st.write('I am using a SNAP (Stanford Network Analysis Platform) graph dataset with 27,806 edges and 7,624 nodes. The motivation behind this dashboard and Jupyter notebook is to make the dataset easier to explore for individuals who are new to network analysis and Graph ML.')
     st.text(" ")
     st.text(" ")
@@ -325,7 +325,7 @@ def inference_page(graph):
     were reduced using a customised backwards stepwise process which drops the least 
     important features in each iteration. 
     
-    The full model building process can be found in the associated ipython notebook [here](https://github.com/curtiscoding1/lastfm_graphml_dashboard/blob/main/LASTFM_Network_Classifier_Development.ipynb).
+    The full model building process can be found in the associated ipython notebook [here](https://github.com/CurtisHunter/lastfm_graphml_dashboard/blob/main/LASTFM_Network_Classifier_Development.ipynb).
     """)
 
     # Load model report from S3
