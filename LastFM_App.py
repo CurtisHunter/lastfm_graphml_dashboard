@@ -165,13 +165,15 @@ def intro_page():
     st.markdown("""
     This dataset captures a social network of LastFM users from Asian countries, collected via the public API in March 2020. It includes:
 
-    7,624 nodes (users)
-    27,806 edges (mutual follower relationships)
-    Each user (node) features:
+    - 7,624 nodes (users)
+    - 27,806 edges (mutual follower relationships)
+    
+    Where each user (node) has the features:
 
-    A list of liked artists
-    The user's country
-    The machine learning model, showcased on the 'Predict' tab, predicts a user's country based on their liked artists and connections with other users.
+    - A list of liked artists
+    - The user's country
+    
+    The machine learning model, showcased on the 'Predict' tab, predicts a user's country based on the features and network relationships above.
     """)
     st.text(" ")
     st.text(" ")
