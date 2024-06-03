@@ -150,23 +150,38 @@ def plot_target_distribution(target_df):
 
 def intro_page():
     st.title('LastFM Social Network Classifier')
-    st.write('This is an app to showcase network visualization and a machine learning model with 89% accuracy which was developed in [this](https://github.com/CurtisHunter/lastfm_graphml_dashboard/blob/main/LASTFM_Network_Classifier_Development.ipynb) Jupyer Notebook .')
-    st.write('I am using a SNAP (Stanford Network Analysis Platform) graph dataset with 27,806 edges and 7,624 nodes. The motivation behind this dashboard and Jupyter notebook is to make the dataset easier to explore for individuals who are new to network analysis and Graph ML.')
+    st.markdown("""
+    ##### Project Overview
+    """)
+    st.write('Welcome to the LastFM Social Network Analysis and Prediction Dashboard! This application demonstrates network visualization and a 89% Accurate machine learning model, developed within [this Jupyter Notebook](https://github.com/CurtisHunter/lastfm_graphml_dashboard/blob/main/LASTFM_Network_Classifier_Development.ipynb), that predicts the location of users based on their liked artists and connections.')
     st.text(" ")
     st.text(" ")
     st.image("GephiVisLastFM.png", caption="Gephi Visualization of the dataset, with node size representing the degree of nodes")
     st.text(" ")
     st.text(" ")
     st.markdown("""
-    ##### Dataset Description
-    This dataset represents a social network of LastFM users collected from the public API in March 2020. It consists of LastFM users from Asian countries, with edges representing mutual follower relationships between them. The vertices have 2 features: a list artists liked by the users and the country of the user. The machine learning model on the 'Inference' tab uses the 'liked artists' attribute and relationships with other users to predict the country location of that user.
+    ##### Dataset Overview
     """)
+    st.markdown("""
+    This dataset captures a social network of LastFM users from Asian countries, collected via the public API in March 2020. It includes:
+
+    7,624 nodes (users)
+    27,806 edges (mutual follower relationships)
+    Each user (node) features:
+
+    A list of liked artists
+    The user's country
+    The machine learning model, showcased on the 'Predict' tab, predicts a user's country based on their liked artists and connections with other users.
+    """)
+    st.text(" ")
+    st.text(" ")
     st.markdown("For more information, you can visit the [dataset page](https://snap.stanford.edu/data/feather-lastfm-social.html).")
     st.text(" ")
     st.text(" ")
+    st.image("photo2.jpg")
     st.markdown("""
     ##### Data Modifications
-    For intuition, I have mapped the country attribute of nodes, to actual country names (see Country Mapping tab). These country names were somewhat arbitrary as the data source does not provide the name of the country IDs. The most common country IDs in the dataset are the most populus countries. For example, instead of using the country label ('target') 0, I have labelled ID 0 as 'Indonesia' """)
+    For intuition, I have mapped the country attribute of nodes, to actual country names (see Country Mapping tab). These country names were somewhat arbitrary as the data source does not provide the name of the country IDs. The most common country IDs in the dataset are the most populus countries. For example, instead of using the country label ('target') 0, I have labelled ID 0 as 'Indonesia'.""")
     st.text(" ")
     st.text(" ")
     st.text(" ")
@@ -229,8 +244,8 @@ def eda_page(graph, target_df):
 
         # Display KPI-style boxes for community metrics
         subgraph = graph.subgraph(community_nodes)
-        assortativity = nx.degree_assortativity_coefficient(subgraph)
-        transitivity = nx.transitivity(subgraph)
+        assortativity = round(nx.degree_assortativity_coefficient(subgraph), 4)
+        transitivity = round(nx.transitivity(subgraph), 4)
         community_size = len(subgraph.nodes)
 
         st.subheader("Community Metrics")
