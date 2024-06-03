@@ -1,6 +1,5 @@
 ## Please find live dashboard with the deployed ML model (running on an AWS EC2 instance) here:
-https://lastfmnetwork.streamlit.app/
-
+https://lastfmnet.streamlit.app/
 
 #### Please find the Jupyter notebook for the full model development process here:
 https://github.com/CurtisHunter/lastfm_graphml_dashboard/blob/main/LASTFM_Network_Classifier_Development.ipynb
